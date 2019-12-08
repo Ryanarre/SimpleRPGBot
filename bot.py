@@ -50,6 +50,7 @@ def main_action(message):
                 bot.send_message(message.chat.id, 'Противник побеждён! Его здоровье и урон будут увеличены')
                 boss_max_hp += 1000
                 boss_hp = boss_max_hp
+                hero_hp = hero_max_hp
                 boss_min_atk += 20
                 boss_max_atk += 30
             boss_damage = random.randint(boss_min_atk, boss_max_atk)
@@ -60,6 +61,7 @@ def main_action(message):
                 bot.send_message(message.chat.id, 'Вы потерпели поражение! Ваше здоровье и урон будут увеличены')
                 hero_max_hp += 10
                 hero_hp = hero_max_hp
+                boss_hp = boss_max_hp
                 hero_min_atk += 2
                 hero_max_atk += 1
 
@@ -73,6 +75,7 @@ def main_action(message):
                     bot.send_message(message.chat.id, 'Вы потерпели поражение! Ваше здоровье и урон будут увеличены')
                     hero_max_hp += 10
                     hero_hp = hero_max_hp
+                    boss_hp = boss_max_hp
                     hero_min_atk += 2
                     hero_max_atk += 1
             else:
